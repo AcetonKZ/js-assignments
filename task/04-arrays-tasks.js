@@ -56,6 +56,7 @@ function generateOdds(len) {
  *    [] => [] 
  */
 function doubleArray(arr) {
+   return arr.concat(arr);
    throw new Error('Not implemented');
 }
 
@@ -133,6 +134,10 @@ function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
+   
+ return  arr.map(function(item){
+        return item.length;
+   })
    throw new Error('Not implemented');
 }
 
@@ -177,6 +182,7 @@ function getHead(arr, n) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'b', 'c', 'd' ]
  */
 function getTail(arr, n) {
+   return arr.slice(-n);
    throw new Error('Not implemented');
 }
 
@@ -217,6 +223,9 @@ function toCsvText(arr) {
  *   [ 10, 100, -1 ]      => [ 100, 10000, 1 ]
  */
 function toArrayOfSquares(arr) {
+   return arr.map(function(item){
+      return item*item;
+   })
    throw new Error('Not implemented');
 }
 
@@ -388,6 +397,7 @@ function findAllOccurences(arr, item) {
  *    ['rock', 'paper', 'scissors']     => 'rock,paper,scissors'
  */
 function toStringList(arr) {
+   return arr.join(",");
    throw new Error('Not implemented');
 }
 
@@ -456,6 +466,13 @@ function getIdentityMatrix(n) {
  *     3, 3   => [ 3 ]
  */
 function getIntervalArray(start, end) {
+  let size = end - start + 1;
+  let result = [size];
+  let i = start-1;
+      return result.map(function(){
+         i++;  
+         return i;
+      });
    throw new Error('Not implemented');
 }
 
